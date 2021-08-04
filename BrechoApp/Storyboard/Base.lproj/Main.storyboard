@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pYi-9z-6O5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="yRA-ON-jXw">
+            <objects>
+                <tabBarController id="pYi-9z-6O5" customClass="TabBarViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dss-XS-PYL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.3214678466" green="0.44918954370000003" blue="0.30586043000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.29435447230339817" green="0.44918954370000003" blue="0.30586043000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.17595318935477741" green="0.49494116085091822" blue="0.25752006480284567" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="TabBar" destination="dss-XS-PYL" id="hPJ-bR-y46"/>
+                        <segue destination="QX5-Bs-T28" kind="relationship" relationship="viewControllers" id="n74-Y0-8sh"/>
+                        <segue destination="bnC-bq-NPj" kind="relationship" relationship="viewControllers" id="v27-0p-h8u"/>
+                        <segue destination="hko-cx-QwR" kind="relationship" relationship="viewControllers" id="2Lb-lD-9On"/>
+                        <segue destination="xRN-Uq-pE4" kind="relationship" relationship="viewControllers" id="QE3-In-aqV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5a-dB-v4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-163"/>
+        </scene>
+        <!--Brechós-->
+        <scene sceneID="ZKN-PM-pDE">
+            <objects>
+                <navigationController id="QX5-Bs-T28" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Brechós" image="bag" catalog="system" id="53S-jP-MgA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nhc-Bo-UU6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q3f-V3-WIb" kind="relationship" relationship="rootViewController" id="Tom-p6-nJn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hak-4C-lfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459" y="649"/>
+        </scene>
+        <!--Brecho Collection View Controller-->
+        <scene sceneID="epP-dU-voe">
+            <objects>
+                <viewController id="q3f-V3-WIb" customClass="BrechoCollectionViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k2u-m0-tMj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bet-Vh-DYU" customClass="BrechosCollection" customModule="BrechoApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="235" width="374" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="59" minimumInteritemSpacing="30" id="XIp-TF-rYJ">
+                                    <size key="itemSize" width="286" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bkl-Wo-djI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lsa-qZ-TaA"/>
+                    <connections>
+                        <segue destination="n3U-Xa-HYF" kind="show" identifier="PopUpBrechoViewController" id="e0h-aI-S6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90e-7K-Ucb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459" y="1397"/>
+        </scene>
+        <!--Pop Up Brecho View Controller-->
+        <scene sceneID="r5z-dD-snY">
+            <objects>
+                <viewController storyboardIdentifier="PopUpBrechoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n3U-Xa-HYF" customClass="PopUpBrechoViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qRT-yt-Vzp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zsW-V8-5Lb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="HuP-P7-Bqe">
+                        <barButtonItem key="backBarButtonItem" title="Brechós" id="YKA-fr-GKG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iX-A7-o8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="3019"/>
+        </scene>
+        <!--Details Explorar View Controller-->
+        <scene sceneID="3l4-eH-sZa">
+            <objects>
+                <viewController storyboardIdentifier="DetailsExplorarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K4X-cH-ndp" customClass="DetailsExplorarViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKM-Pt-WIz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RW2-DF-6VA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="9LG-KJ-Wjs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVn-V1-iHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286.95652173913044" y="2076.5625"/>
+        </scene>
+        <!--Explorar Collection View Controller-->
+        <scene sceneID="LMy-gM-HUa">
+            <objects>
+                <viewController id="Gqz-gC-oIf" customClass="ExplorarCollectionViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap5-ph-BED">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-Y5-dm1" customClass="ExplorarCollection" customModule="BrechoApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="206" width="340" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WUW-8U-RhU">
+                                    <size key="itemSize" width="335" height="602"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ltF-4v-Q0M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9vj-jx-TZI"/>
+                    <connections>
+                        <segue destination="K4X-cH-ndp" kind="show" identifier="conexao" id="7w8-H0-E39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fm-zz-hhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286.95652173913044" y="1396.875"/>
+        </scene>
+        <!--Favoritos Collection View Controller-->
+        <scene sceneID="3OZ-xC-npU">
+            <objects>
+                <viewController id="3Px-12-H4f" customClass="FavoritosCollectionViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2E-bC-nu4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-It-crV" customClass="FavoritosCollection">
+                                <rect key="frame" x="32" y="182" width="350" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rgE-pb-Xo6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="28n-hq-DdD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yDu-yh-9tQ"/>
+                    <connections>
+                        <segue destination="n3U-Xa-HYF" kind="show" identifier="conexaoFav" id="Oh1-yd-xmq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFl-hc-gCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.4927536231885" y="1396.875"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="26E-ie-DwR">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="JQZ-nj-ukG" customClass="MapViewController" customModule="BrechoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBf-rD-zmz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o2w-nA-jf8">
+                                <rect key="frame" x="0.0" y="42" width="414" height="771"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YLr-V9-WFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="3Wx-Ep-Phk"/>
+                    <connections>
+                        <outlet property="Map" destination="o2w-nA-jf8" id="YO3-Z1-cgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRL-TR-wMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740.5797101449277" y="1396.875"/>
+        </scene>
+        <!--Explorar-->
+        <scene sceneID="0Jv-hu-e9c">
+            <objects>
+                <navigationController id="bnC-bq-NPj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explorar" image="newspaper" catalog="system" id="Yhd-ED-Bko"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6qf-3p-w1r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gqz-gC-oIf" kind="relationship" relationship="rootViewController" id="HnR-Ig-BOL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDC-l3-7XX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="649"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="vMD-8N-qjP">
+            <objects>
+                <navigationController id="hko-cx-QwR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="heart" catalog="system" id="F0P-Zr-s4B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tMH-SB-D8H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Px-12-H4f" kind="relationship" relationship="rootViewController" id="rXb-R3-1Lw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XbX-9z-yYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="649"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="lv5-8s-Hfv">
+            <objects>
+                <navigationController id="xRN-Uq-pE4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="map" catalog="system" id="UZw-Hs-bMf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dcd-pw-HIX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JQZ-nj-ukG" kind="relationship" relationship="rootViewController" id="JNp-0g-J7r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SSV-Ag-3iH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="649"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e0h-aI-S6T"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.043776132170000003" green="0.2488998771" blue="0.1019317284" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
